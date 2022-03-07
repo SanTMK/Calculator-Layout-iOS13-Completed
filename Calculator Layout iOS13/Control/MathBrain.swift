@@ -8,8 +8,8 @@
 
 import UIKit
 
+///    Handles the main computations and logic needed in the calculator
 struct MathBrain {
-//    Handles the main computations and logic needed in the calculator
     
     private var memory: [String] = []
     private var opperatorsPressed: [String] = []
@@ -18,18 +18,21 @@ struct MathBrain {
     
     
     
+///        retrieves a array [String] with the current numbers submited by the use
     func getMemory() -> ([String],[String]) {
-//        retrieves a array [String] with the current numbers submited by the user
+
         return (memory, opperatorsPressed)
     }
     
+///        Identifies the number (between 0-9 and ".") pressed and appends it to memory array
     mutating func addToCurrentNum(_ btnTittle: String) {
-//        Identifies the number (between 0-9 and ".") pressed and appends it to memory array
+
         currentNumber.append(btnTittle)
         
         }
+    
+///    appends current number to memory, clears it, and appends the opperator pressed
     mutating func pressedOperator(_ btnTittle: String) {
-//        Sets the operatorPressed value to true, Appends current number to memory and then clears current Number
         
         memory.append(currentNumber)
         currentNumber = ""
@@ -37,8 +40,8 @@ struct MathBrain {
         
     }
     
+///        multiplies the current number by -1
     mutating func turnNegative(_ num: String) -> String {
-//        multiplies the current number by -1
         
         var num = num
         
@@ -52,8 +55,9 @@ struct MathBrain {
         return num
     }
     
+///        Divides the current number by 100
     mutating func toPercent(_ num: String) -> String {
-//        Divides the current number by 100
+
         var num = num
         
         let percentage = 0.01 * Double(num)!
@@ -64,14 +68,16 @@ struct MathBrain {
         return num
     }
     
+///        Sets the operatorPressed value to true, Appends current number to memory and then clears current Number
     mutating func allClear() -> String {
         currentNumber = ""
         
         return "0"
     }
     
+///Erases the trailing zeros leftover from converting Double -> String
     private func cleanString(_ str: String) -> String {
-//        erases the trailing zeros leftover from converting Double -> String
+
         
         var strArray = Array(str)
         if strArray.contains(".") {
