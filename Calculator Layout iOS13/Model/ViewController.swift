@@ -42,11 +42,11 @@ class ViewController: UIViewController {
     
         switch sender.currentTitle {
         case "%":
-            print("hello")
+            Output.text = mb.toPercent(mb.currentNumber)
         case "+/-":
             Output.text = mb.turnNegative(mb.currentNumber)
         case "AC":
-            print("111")
+            Output.text = mb.allClear()
         default:
             print("error")
         }
