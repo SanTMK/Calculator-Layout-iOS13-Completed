@@ -8,7 +8,7 @@
 
 import UIKit
 
-///    Handles the main computations and logic needed in the calculator
+///         Handles the main computations and logic needed in the calculator
 struct MathBrain {
     
     private var memory: [String] = []
@@ -18,7 +18,7 @@ struct MathBrain {
     
     
     
-///        retrieves a array [String] with the current numbers submited by the use
+///        retrieves a array [String] with the current numbers submited by the user and operator buttons pressed ([memory], [operatorsPressed])
     func getMemory() -> ([String],[String]) {
 
         return (memory, opperatorsPressed)
@@ -31,7 +31,7 @@ struct MathBrain {
         
         }
     
-///    appends current number to memory, clears it, and appends the opperator pressed
+///         appends current number to memory, clears it, and appends the opperator pressed
     mutating func pressedOperator(_ btnTittle: String) {
         
         memory.append(currentNumber)
@@ -75,7 +75,7 @@ struct MathBrain {
         return "0"
     }
     
-///Erases the trailing zeros leftover from converting Double -> String
+///         Erases the trailing zeros leftover from converting Double --> String
     private func cleanString(_ str: String) -> String {
 
         

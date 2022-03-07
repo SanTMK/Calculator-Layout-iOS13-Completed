@@ -14,18 +14,12 @@ var mb = MathBrain()
 class ViewController: UIViewController {
     @IBOutlet weak var Output: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     
-
     
     @IBAction func Numbers(_ sender: UIButton) {
         
         mb.addToCurrentNum(sender.currentTitle!)
         Output.text = mb.currentNumber
-        
         
     }
     
@@ -53,13 +47,8 @@ class ViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
     @IBAction func EqualsBtn(_ sender: UIButton) {
     }
     
-
 }
 
