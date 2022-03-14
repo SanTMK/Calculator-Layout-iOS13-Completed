@@ -19,7 +19,7 @@ struct MathBrain {
     
     
     
-    private func findMD() -> [Int] {
+    private func findIndicesMD() -> [Int] {
         
         var indices: [Int] = []
         
@@ -33,7 +33,7 @@ struct MathBrain {
         
     }
     
-    private func findAS() -> [Int] {
+    private func findIndicesAS() -> [Int] {
 
         var indices: [Int] = []
             
@@ -46,7 +46,7 @@ struct MathBrain {
         return indices
     }
     
-    private func toInteger(nums: [String]) -> [Double] {
+    private func toTypeDouble(nums: [String]) -> [Double] {
         
         var newArr: [Double] = []
         
@@ -59,21 +59,33 @@ struct MathBrain {
     
     func doMath() {
         
-        var newInputNumbers
+        var newInputNumbers = toTypeDouble(nums: inputNumbers)
         
-        if !findMD().isEmpty {
+        if !findIndicesMD().isEmpty {
             
-            for (i, num) in findMD().enumerated() {
+            for (_, num) in findIndicesMD().enumerated() {
+                
+                newInputNumbers[num]
                 
             }
             
         }
         
-        if !findAS().isEmpty {
+        if !findIndicesAS().isEmpty {
             
         }
     }
-    
+    // string to expression by Martin R. (2014) https://stackoverflow.com/a/24706338/16824128
+    func pemdas(equation: NSString) -> Double {
+//        var equation:NSString = "5*(2.56-1.79)-4.1"
+
+        let expr = NSExpression(format: equation as String)
+        if let result = expr.expressionValue(with: nil, context: nil) as? Double {
+            return result // -0.25
+        } else {
+            return 0.0
+        }
+    }
     
     
 }

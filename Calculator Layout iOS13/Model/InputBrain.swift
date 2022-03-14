@@ -6,7 +6,7 @@
 //  Copyright © 2022 The App Brewery. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 ///         Handles the main computations and logic needed in the calculator
 struct InputBrain {
