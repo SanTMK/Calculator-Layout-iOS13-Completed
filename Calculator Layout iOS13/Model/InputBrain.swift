@@ -9,7 +9,7 @@
 import UIKit
 
 ///         Handles the main computations and logic needed in the calculator
-struct MathBrain {
+struct InputBrain {
     
     private var memory: [String] = []
     private var opperatorsPressed: [String] = []
@@ -23,7 +23,7 @@ struct MathBrain {
 
         return (memory, opperatorsPressed)
     }
-    
+        
 ///        Identifies the number (between 0-9 and ".") pressed and appends it to memory array
     mutating func addToCurrentNum(_ btnTittle: String) {
 

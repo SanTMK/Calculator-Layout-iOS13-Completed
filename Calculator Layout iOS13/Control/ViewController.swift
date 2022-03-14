@@ -4,11 +4,13 @@
 //
 //  Created by Angela Yu on 01/07/2019.
 //  Copyright © 2019 The App Brewery. All rights reserved.
+
+//  Editted by Santiago Hernandez on MAr. 03, 2022
 //
 
 import UIKit
 
-var mb = MathBrain()
+var ib = InputBrain()
 
 
 class ViewController: UIViewController {
@@ -18,8 +20,8 @@ class ViewController: UIViewController {
     
     @IBAction func Numbers(_ sender: UIButton) {
         
-        mb.addToCurrentNum(sender.currentTitle!)
-        Output.text = mb.currentNumber
+        ib.addToCurrentNum(sender.currentTitle!)
+        Output.text = ib.currentNumber
         
     }
     
@@ -27,7 +29,7 @@ class ViewController: UIViewController {
         
         let symbol = sender.currentTitle!
         
-        mb.pressedOperator(symbol)
+        ib.pressedOperator(symbol)
         Output.text = symbol
         
     }
@@ -36,11 +38,11 @@ class ViewController: UIViewController {
     
         switch sender.currentTitle {
         case "%":
-            Output.text = mb.toPercent(mb.currentNumber)
+            Output.text = ib.toPercent(ib.currentNumber)
         case "+/-":
-            Output.text = mb.turnNegative(mb.currentNumber)
+            Output.text = ib.turnNegative(ib.currentNumber)
         case "AC":
-            Output.text = mb.allClear()
+            Output.text = ib.allClear()
         default:
             print("error")
         }

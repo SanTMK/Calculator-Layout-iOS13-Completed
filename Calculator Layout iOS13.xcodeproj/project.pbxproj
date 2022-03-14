@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78BD061E27D5A86C00AE0100 /* MathBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD061D27D5A86C00AE0100 /* MathBrain.swift */; };
+		78298BC927DF8BFA00491DBB /* MathBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78298BC827DF8BFA00491DBB /* MathBrain.swift */; };
+		78BD061E27D5A86C00AE0100 /* InputBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD061D27D5A86C00AE0100 /* InputBrain.swift */; };
 		AD0C513722CA22D500AADC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513622CA22D500AADC4D /* AppDelegate.swift */; };
 		AD0C513922CA22D500AADC4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513822CA22D500AADC4D /* SceneDelegate.swift */; };
 		AD0C513B22CA22D500AADC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513A22CA22D500AADC4D /* ViewController.swift */; };
@@ -18,7 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		78BD061D27D5A86C00AE0100 /* MathBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathBrain.swift; sourceTree = "<group>"; };
+		78298BC827DF8BFA00491DBB /* MathBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathBrain.swift; sourceTree = "<group>"; };
+		78BD061D27D5A86C00AE0100 /* InputBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputBrain.swift; sourceTree = "<group>"; };
 		AD0C513322CA22D500AADC4D /* Calculator Layout iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator Layout iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0C513622CA22D500AADC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD0C513822CA22D500AADC4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +46,8 @@
 		78BD061A27D5A7D300AE0100 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AD0C513A22CA22D500AADC4D /* ViewController.swift */,
-				AD0C513622CA22D500AADC4D /* AppDelegate.swift */,
-				AD0C513822CA22D500AADC4D /* SceneDelegate.swift */,
+				78BD061D27D5A86C00AE0100 /* InputBrain.swift */,
+				78298BC827DF8BFA00491DBB /* MathBrain.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -63,7 +64,7 @@
 		78BD061C27D5A7F100AE0100 /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				78BD061D27D5A86C00AE0100 /* MathBrain.swift */,
+				AD0C513A22CA22D500AADC4D /* ViewController.swift */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -93,6 +94,8 @@
 				78BD061C27D5A7F100AE0100 /* Control */,
 				AD0C513F22CA22D800AADC4D /* Assets.xcassets */,
 				AD0C514422CA22D800AADC4D /* Info.plist */,
+				AD0C513622CA22D500AADC4D /* AppDelegate.swift */,
+				AD0C513822CA22D500AADC4D /* SceneDelegate.swift */,
 			);
 			path = "Calculator Layout iOS13";
 			sourceTree = "<group>";
@@ -124,7 +127,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = "The App Brewery";
 				TargetAttributes = {
 					AD0C513222CA22D500AADC4D = {
@@ -169,9 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78BD061E27D5A86C00AE0100 /* MathBrain.swift in Sources */,
+				78BD061E27D5A86C00AE0100 /* InputBrain.swift in Sources */,
 				AD0C513B22CA22D500AADC4D /* ViewController.swift in Sources */,
 				AD0C513722CA22D500AADC4D /* AppDelegate.swift in Sources */,
+				78298BC927DF8BFA00491DBB /* MathBrain.swift in Sources */,
 				AD0C513922CA22D500AADC4D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +220,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -276,6 +281,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
